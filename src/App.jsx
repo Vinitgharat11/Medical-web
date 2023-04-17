@@ -1,4 +1,4 @@
-import { Client, Header, Navbar } from "./Components"
+import { About, Client, Header, Navbar } from "./Components"
 import Features from "./Components/Features"
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <Header/>
       <Client/>
       <Features/>
+      <About/>
     </div>
   )
 }

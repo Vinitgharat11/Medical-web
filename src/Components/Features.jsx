@@ -1,59 +1,33 @@
 import React from 'react'
-import { cardname } from '../constant/vinit'
+import { pulse } from '../assets'
+import { CardData } from '../const'
 
 
-const Card = (props) => {
-  return(
-    <section className=''>
-      <div className='bg-white w-[280px]  '>
-      <div className='ml-4 pt-4'>
-        <img src={props.img} alt="" />
-        </div>
-        <div>
-       <p className=' font-Quicksand ml-5 font-bold'>{props.title}</p>
-      <p className='font-Quicksand text-[12px] ml-5'>{props.description}</p>
-        </div>
-      </div>
 
-    </section>
-  )
-}
 
 
 
 
 const Features = () => {
   return (
-    <section className=' bg-Secondary h-[600px]'>
-      <div className='flex'>
-        <div>
-            <p>innovative Solution For Your Health Needs</p>
+    <section className=' bg-Secondary h-[600px] esm:h-[950px] esm:flex esm:flex-wrap '>
+        <div className='flex justify-center flex-wrap'>
+      
+      {CardData.map(item => (
+
+          <div className='w-[300px]  pt-12 esm:w-[250px] '>
+            <div className='bg-white ml-10 pl-3 pt-5  '>
+              <img src={item.img} alt="" />
+            </div>
+            <div className='bg-white ml-10 pl-3 pb-4 '>
+              <p className='text-[23px] font-Quicksand font-medium'>{item.title}</p>
+              <p className='text-[13px]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, officia laboriosam nisi exercitationem blanditiis odit beatae similique eveniet error, voluptates </p>
+            </div>
+          </div>
+      ))}
+
         </div>
-       {cardname.map(item =>(
-        <div className='flex flex-wrap justify-center'>
-          <Card
-          img={item.img}
-          title={item.title}
-          description={item.description}
-          />
-          <Card
-          img={item.img}
-          title={item.title}
-          description={item.description}
-          />
-          <Card
-          img={item.img}
-          title={item.title}
-          description={item.description}
-          />
-          <Card
-          img={item.img}
-          title={item.title}
-          description={item.description}
-          />
-        </div>
-       ))}
-      </div>
+
     </section>
   )
 }
